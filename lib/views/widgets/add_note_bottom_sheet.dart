@@ -23,9 +23,14 @@ class AddNoteBottomSheet extends StatelessWidget {
             absorbing: state is AddNotesLoading
                 ? true
                 : false, //اذا كانت ترو ما بتخليك تقرب على اي شي بالشاشة
-            child: const Padding(
-              padding: EdgeInsets.symmetric(horizontal: 16),
-              child: SingleChildScrollView(child: AddNoteForm()),
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: 16,
+                right: 16,
+                bottom: MediaQuery.of(context).viewInsets.bottom,
+                /**اوصل لمعلومات عن الجهاز وبهي الطريقة بحسن اني اتحكم بالشاة لما بيطلع الكيبورد*/
+              ),
+              child: const SingleChildScrollView(child: AddNoteForm()),
             ),
           );
         },
