@@ -11,7 +11,7 @@ void main() async {
   await Hive.initFlutter(); //first step
   Bloc.observer = SimpleBlocObserver();
   //second step open box that store data=colliction
-  await Hive.openBox(kNotesBox); //Hive is future should do await
+  await Hive.openBox<NoteModel>(kNotesBox); //Hive is future should do await
   Hive.registerAdapter(NoteModelAdapter());
   runApp(const NotesApp());
 }
