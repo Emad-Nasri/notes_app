@@ -3,13 +3,13 @@ part of 'add_note_cubit.dart';
 @immutable
 abstract class AddNoteState {}
 
-class NotesInitial extends AddNoteState {}
+class AddNotesInitial extends AddNoteState {}
 
-class NotesLoading extends AddNoteState {}
+class AddNotesLoading extends AddNoteState {}
 
-class NotesSuccess extends AddNoteState {}
+class AddNotesSuccess extends AddNoteState {}
 
-class NotesFailure extends AddNoteState {
+class AddNotesFailure extends AddNoteState {
   final String errMessage;
-  NotesFailure(this.errMessage);
+  AddNotesFailure(this.errMessage);
 }
